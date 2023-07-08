@@ -1,0 +1,226 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sansita Swashed', cursive;
+    background-image: url(img/backk.webp);
+}
+/* this is for the container witch have three grids test1, test2 and test3, */
+.container{
+  margin-top: 100px;
+    width: 600px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+
+}
+/* this is for the first grid whit img and a headline */
+.test1{
+    width: 600px;
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px;
+    /* box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+    background-color: #150033; */
+    color: #991313;
+}
+
+.test1 h1{
+    text-align: center;
+    align-items: center;
+    font-weight: 300;
+    text-shadow:1px 1px #eb5e5e;
+}
+
+.images{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px ;
+}
+
+img{
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    border: 2px solid #3d1f02;
+}
+
+.images img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  border: 2px solid red;
+
+}
+
+/* this is for the second grid numinput and unitdropdown */
+.test2{
+    background-image: linear-gradient(to bottom, #150033 , #1a003f);
+    width: 300px;
+    color: whitesmoke;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    display: grid;
+    place-items: center;
+    height: 200px;
+    border-bottom-left-radius: 10px;
+}
+
+#numinput {
+    background-color: #1a003f;
+    color: rgb(219, 215, 188);
+    padding-top: 11px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px; 
+    border: 2px solid #3d1f02;
+    border-radius: 15px;
+    font-size: 16px;
+    width: 250px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  #numinput:hover {
+    border: 2px solid red;
+    cursor: pointer;
+  }
+  
+  #unitdropdown {
+  padding-top: 11px;
+  padding-bottom: 7px;
+  color: rgb(219, 215, 188);
+  border: 2px solid #3d1f02;
+  background-color: #1a003f;
+  border-radius: 15px;
+  font-size: 16px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  }
+  
+  #unitdropdown:hover {
+    border: 2px solid red;
+    cursor: pointer;
+    /* transform: scale(1.1); */
+  }
+/* this is for the third grid whit a <p> a copy button and a convert(result) button */
+.test3{
+    background-image: linear-gradient(to bottom, #150033 , #1a003f);
+    width: 300px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    display: grid;
+    place-items: center;
+    height: 200px;
+}
+
+.test3 p {
+    padding-top: 11px;
+    padding-bottom: 7px;
+    color: rgb(219, 215, 188);
+    border: 2px solid #3d1f02;
+    background-color: #1a003f;
+    border-radius: 15px;
+    font-size: 16px;
+    width: 250px;
+    text-align: center;
+    font-weight: 300;
+    position: fixed;
+    text-decoration: underline;
+    margin-bottom: 116px;
+  }
+
+  .test3 p:empty {
+    display: none;
+}
+ 
+.copy{
+  margin-top: 80px ;
+}
+
+  button {
+    padding: 5px;
+    border-radius: 15px;
+    color: rgb(219, 215, 188);
+    border: 2px solid #3d1f02;
+    background-color: #1a003f;
+    font-size: 16px;
+    width: 100px;
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    border: 2px solid red;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+/* this is for the pop up custume */
+  .notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 999;
+}
+/* if under max width 600 it whats under will happen. this is for mobile */
+@media screen and (max-width: 600px) {
+
+  body {
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .test1{
+        width: 300px;
+    }
+    .test1 h1{
+      font-size: medium;
+  }
+  
+  .images{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 8px 10px;
+    height: 100px;
+
+  }
+  
+  img{
+      width: 37px;
+      height: 37px;
+      border-radius: 50%;
+  }
+    .test1, .test2, .test3{
+        border-radius: 0%;
+    }
+
+    .test1{
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .test3{
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }

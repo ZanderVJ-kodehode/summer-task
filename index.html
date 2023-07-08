@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid component</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" type="js"href="index.js">
+    <script src="index.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="test1">
+            <h1>How Much Would I Weigh On <br><span id="planet-name">Saturn</span></h1></h1>
+            <div class="images">
+                <img src="img/jorden.jpg" alt="earth" onclick="changeOptions('Jorden')">
+                <img src="img/mars.jpg" alt="mars" onclick="changeOptions('Mars')">
+                <img src="img/jupitor.jpg" alt="Jupiter" onclick="changeOptions('Jupiter')">
+                <img src="img/månen1.jpg" alt="Månen" onclick="changeOptions('Månen')">
+                <img src="img/merkur4.jpg" alt="merkur" onclick="changeOptions('Merkur')">
+                <img src="img/neptun.jpg" alt="neptun" onclick="changeOptions('Neptun')">
+                <img src="img/pluto.jpg" alt="pluto" onclick="changeOptions('Pluto')">
+                <img src="img/saturn.jpg" alt="saturn" onclick="changeOptions('Saturn')">
+                <img src="img/solen.jpg" alt="solen" onclick="changeOptions('Solen')">
+                <img src="img/uranus.jpg" alt="uranus" onclick="changeOptions('Uranus')">
+                <img src="img/venus1.jpg" alt="venus" onclick="changeOptions('Venus')">
+            </div>
+         </div>
+
+        <div class="test2">
+            <input type="number" id="numinput" placeholder="Your Weight In Kilos" size="22"/>
+            <select id="unitdropdown">
+                <option value="Saturn">Saturn</option>
+                <option value="Solen">Solen</option>
+                <option value="Merkur">Merkur</option>
+                <option value="Venus">Venus</option>
+                <option value="Jorden">Jorden</option>
+                <option value="Månen">Månen</option>
+                <option value="Mars">Mars</option>
+                <option value="Jupiter">Jupiter</option>
+                <option value="Uranus">Uranus</option>
+                <option value="Neptun">Neptun</option>
+                <option value="Pluto">Pluto</option>
+                </select>
+        </div>
+        <div class="test3">
+            <p id="result"></p>
+            <button class="copy"onclick="copyText()">Copy</button>
+            <button onclick="convertUnit()">Convert</button>
+        </div>
+    </div>
+    
+</body>
+</html>
